@@ -1,5 +1,5 @@
 import React from 'react'
-import Signup from './signup'
+import Signup from './Signup'
 import Login from './Login'
 import IndexPage from './IndexPage';
 import Chatbox from './Chatbox'; 

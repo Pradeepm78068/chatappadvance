@@ -1,0 +1,18 @@
+input{
+    border-radius: 25px;
+}
+.container1{
+
+    margin: 1%;
+    border-radius: 25px;
+    height: 15vh;
+    width: 10vw;
+    background-color: #088395;
+    border: 1px solid black;
+    transition: transform.2s;
+  }
+  .container1:hover{
+    transform: scale(1.1);
+    background-color: #088395;
+    border: 2px solid black;
+  }

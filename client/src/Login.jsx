@@ -18,12 +18,12 @@ export default function Login() {
                 console.log(res);
                 
                 if (res.data.message === "success"){
-                toast.success("Login successful !!")
-                    setTimeout(() => {
+                
                         setUser(res.data.name);
                     navigate("/IndexPage");
-                    }, 2000);
-                    }
+                    } 
+                    else
+                    toast.error("Invalid mail or password");
 
             })
             .catch(err =>{ console.log(err);

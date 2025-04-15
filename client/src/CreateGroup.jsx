@@ -13,7 +13,7 @@ export default function CreateGroup() {
     e.preventDefault();
 
     if (Name.trim() !== "") {
-      axios.post("http://localhost:3001/createGroup", { Name })
+      axios.post("https://chatapp-7rxi.onrender.com/createGroup", { Name })
         .then(res => {
           if (res.data.message === "already registered") {
             alert("Group name already exists");

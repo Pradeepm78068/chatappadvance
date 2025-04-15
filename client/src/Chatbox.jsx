@@ -4,7 +4,7 @@ import io from 'socket.io-client'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const socket = io.connect("http://localhost:3001")
+const socket = io.connect("https://chatapp-7rxi.onrender.com")
 
 export default function Chatbox() {
   const [chat, setChat] = useState("");

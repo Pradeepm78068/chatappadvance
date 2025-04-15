@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './styles/LoginWithCode.css'
 import {  useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function LoginWithCode() {
   const [Name, setName] = useState("")
    const navigate=useNavigate();
@@ -15,8 +17,9 @@ export default function LoginWithCode() {
    if (res.data.message ==="Joined"){
     sessionStorage.setItem("groupName", Name);
        navigate("/ChatBox");
-      }else
-      alert(res.data.message);
+      }else{
+      toast.warning(res.data.message);
+    }
       }
 ).catch(err=>console.log(err)) 
   }
@@ -26,6 +29,7 @@ export default function LoginWithCode() {
       <input type="text" onChange={handleclick} />
       
         <button className="container1" onClick={onSubmit}>Join Room</button>
+        <ToastContainer/>
       </div>
   )
 }

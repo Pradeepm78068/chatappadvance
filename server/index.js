@@ -11,12 +11,16 @@ const cors=require("cors")
   const server=http.createServer(app)
   const io=new Server(server,{
      cors:{
-         origin:'http://localhost:5173',
+         origin:'*',
          methods:["GET","POST"]
      }
   })
 
-mongoose.connect("mongodb://127.0.0.1:27017/Client")
+mongoose.connect("mongodb+srv://717823p337:pradeepm%4078@client.tetjj.mongodb.net/?retryWrites=true&w=majority&appName=client")
+.then(()=>{
+    console.log("mongo db connected")
+})
+.catch(err=> console.log(err));
 
 app.post('/register',async(req,res)=>{
     const {Name,Mail,PassWord}=req.body;
@@ -24,8 +28,8 @@ app.post('/register',async(req,res)=>{
     if(user)
     {
         return res.json("already registered");
-    }
-   ClientModel.create(req.body)
+    } 
+   ClientModel.create(req.body) 
    .then(Client => res.json(Client))
    .catch(err =>{res.json(err)})
 })

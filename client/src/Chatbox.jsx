@@ -33,7 +33,7 @@ export default function Chatbox() {
       socket.emit("message", { text: chat, sender: name, room: groupName });
       setMessages((prevMessages) => [...prevMessages, { text: chat, sender: name }]);
       setChat("");
-      toast.success("This is a success message!")
+      toast.success("Message Sent!")
     }
   };
 

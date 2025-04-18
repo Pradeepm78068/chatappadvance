@@ -5,8 +5,8 @@ input{
 
     margin: 1%;
     border-radius: 25px;
-    height: 15vh;
-    width: 10vw;
+    height:max-content;
+    width: max-content;
     background-color: #088395;
     border: 1px solid black;
     transition: transform.2s;

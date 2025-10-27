@@ -12,7 +12,7 @@ export default function LoginWithCode() {
   }
   const onSubmit=(e)=>{
    e.preventDefault();
-   axios.post("https://chatapp-7rxi.onrender.com/LoginWithCode",{Name}) 
+   axios.post("http://localhost:3000/LoginWithCode",{Name}) 
    .then (res=> {
    if (res.data.message ==="Joined"){
     sessionStorage.setItem("groupName", Name);

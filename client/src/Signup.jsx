@@ -11,7 +11,7 @@ export default function Signup() {
     const Navigate = useNavigate();
     const handleButton = (event) => {
         event.preventDefault(); 
-        axios.post('https://chatapp-7rxi.onrender.com/register', { Name, Mail, PassWord })
+        axios.post('http://localhost:3000/register', { Name, Mail, PassWord })
             .then(res => {
                 console.log(res);
                 Navigate('/')

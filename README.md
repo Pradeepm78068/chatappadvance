@@ -28,17 +28,7 @@ Socket.IO
 
 JWT
 
-▶️ How to Run
 
-Clone the repo
-
-Install dependencies (client & server)
-
-Add your .env values (MongoDB URL, JWT secret)
-
-Start backend → npm run dev
-
-Start frontend → npm start
 
 👤 Project Owner
 
